@@ -1,0 +1,50 @@
+/* Project Details Card (Labs Folder) */
+.project-details-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 28px rgba(108,99,255,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #e3e6fd;
+    position: relative;
+    overflow: hidden;
+}
+body.dark-mode .project-details-card {
+    background: linear-gradient(135deg, #23272f 0%, #33345a 100%);
+    color: #f5f6fa;
+    border-color: #33345a;
+    box-shadow: 0 4px 24px rgba(160,153,250,0.13), 0 1.5px 6px rgba(0,0,0,0.13);
+}
+
+/* Back Button for Labs Folder */
+.back-to-labs-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    background: #f8f9fb;
+    color: #5548c8;
+    padding: 0.55rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.06);
+    border: 1.5px solid #e3e6fd;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.back-to-labs-btn:hover {
+    background: #e3e6fd;
+    color: #6c63ff;
+    box-shadow: 0 4px 16px rgba(108,99,255,0.13);
+}
+body.dark-mode .back-to-labs-btn {
+    background: #23272f;
+    color: #a099fa;
+    border-color: #33345a;
+}
+body.dark-mode .back-to-labs-btn:hover {
+    background: #33345a;
+    color: #fff;
+}

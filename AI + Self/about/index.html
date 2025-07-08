@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ntwork Beginner</title>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Ntwork Beginner</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="../study-topics/index.html">Study Topics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../study-topics/networking/index.html">Networking</a></li>
+                        <li><a href="../study-topics/cloud/index.html">Cloud</a></li>
+                        <li><a href="../study-topics/cybersecurity/index.html">Cybersecurity</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="../blogs/index.html">Blogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../blogs/networking/index.html">Networking</a></li>
+                        <li><a href="../blogs/cloud/index.html">Cloud</a></li>
+                        <li><a href="../blogs/cybersecurity/index.html">Cybersecurity</a></li>
+                    </ul>
+                </li>
+                <li><a href="../labs/index.html">Labs</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+    <main>
+    <section class="about-hero section fade-in">
+        <div class="about-hero-inner">
+            <div class="about-photo-circle">
+                <img src="profile-photo.jpg" alt="Your Photo" class="about-avatar" onerror="this.style.display='none'">
+            </div>
+            <div class="about-hero-text">
+                <h1 class="about-title">Hi, I'm <span class="about-name">Ntwork Beginner</span> <span class="about-emoji">🌟</span></h1>
+                <p class="about-intro">Welcome to my digital home!<br>
+                    <span class="about-highlight">Networking | Cloud | Cybersecurity</span>
+                </p>
+                <div class="about-socials">
+                    <a href="https://www.linkedin.com/in/ntworkbeginner" target="_blank" aria-label="LinkedIn" class="footer-icon"><img src="../assets/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/ntworkbeginner" target="_blank" aria-label="GitHub" class="footer-icon"><img src="../assets/github.svg" alt="GitHub"></a>
+                    <a href="https://www.youtube.com/@ntworkbeginner" target="_blank" aria-label="YouTube" class="footer-icon"><img src="../assets/youtube.svg" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="about-resume section fade-in">
+      <h2 class="about-section-title">📄 My Resume</h2>
+      <div class="about-resume-wrapper">
+        <div class="about-resume-image-container" tabindex="0" role="button" aria-label="Preview full resume image">
+          <img src="Resume Image.png" alt="Resume Preview" class="about-resume-preview-img zoomable-img" id="resumePreviewImg">
+<div class="about-resume-zoom-instruction" style="text-align:center;font-size:0.98rem;color:#888;margin-top:0.35em;">Click to zoom</div>
+        </div>
+      </div>
+        <a href="Rajnish_Kumar_Resume.pdf" download class="about-resume-download-btn">Download Resume</a>
+  </div>
+</section>
+<script>
+(function(){
+  const img = document.getElementById('resumePreviewImg');
+  const container = img.closest('.about-resume-image-container');
+  let zoomed = false;
+
+  function showZoom() {
+    img.classList.add('zoomed');
+    zoomed = true;
+  }
+  function hideZoom() {
+    img.classList.remove('zoomed');
+    zoomed = false;
+  }
+
+  // Hover/leave (desktop)
+  container.addEventListener('mouseenter', showZoom);
+  container.addEventListener('mouseleave', function(e){
+    if (!container.contains(document.activeElement)) hideZoom();
+  });
+  // Keyboard focus/blur
+  container.addEventListener('focus', showZoom);
+  container.addEventListener('blur', hideZoom);
+  // ESC key
+  window.addEventListener('keydown', function(e){
+    if (zoomed && (e.key === 'Escape' || e.key === 'Esc')) hideZoom();
+  });
+  // Touch: tap image to zoom, tap again to unzoom
+  img.addEventListener('touchstart', function(e){
+    if (!zoomed) { showZoom(); e.preventDefault(); }
+    else { hideZoom(); e.preventDefault(); }
+  });
+})();
+</script>
+
+    <section class="about-highlights section fade-in">
+        <h2 class="about-section-title">✨ What Makes Me Unique</h2>
+        <div class="about-highlights-grid">
+            <div class="about-card">
+                <h3>🌐 Networking Enthusiast</h3>
+                <p>I love building, breaking, and fixing networks. CCNA labs, real-world configs, and packet tracing are my playground.</p>
+            </div>
+            <div class="about-card">
+                <h3>☁️ Cloud Explorer</h3>
+                <p>From AWS to Azure, I’m fascinated by how the cloud powers the world. Always hands-on, always learning.</p>
+            </div>
+            <div class="about-card">
+                <h3>🛡️ Cybersecurity Advocate</h3>
+                <p>Security isn’t just a checkbox—it's a mindset. I enjoy ethical hacking, blue teaming, and protecting what matters.</p>
+            </div>
+            <div class="about-card">
+                <h3>🎥 Content Creator</h3>
+                <p>Sharing my journey on <a href="https://www.youtube.com/@ntworkbeginner" target="_blank">YouTube</a>, GitHub, and LinkedIn. I believe in learning in public and helping others grow!</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-journey section fade-in">
+        <h2 class="about-section-title">🚀 My Journey</h2>
+        <div class="about-journey-timeline">
+            <div class="about-journey-step">
+                <span class="about-journey-dot">🎓</span>
+                <div>
+                    <h4>Started as a Curious Learner</h4>
+                    <p>Fell in love with technology, networks, and the magic of connecting people and devices.</p>
+                </div>
+            </div>
+            <div class="about-journey-step">
+                <span class="about-journey-dot">🧑‍💻</span>
+                <div>
+                    <h4>Lab Addict</h4>
+                    <p>Built dozens of labs, tackled real-world scenarios, and never stopped experimenting.</p>
+                </div>
+            </div>
+            <div class="about-journey-step">
+                <span class="about-journey-dot">🌍</span>
+                <div>
+                    <h4>Global Community</h4>
+                    <p>Connected with networkers and learners worldwide. Collaboration and sharing are my superpowers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-projects section fade-in">
+        <h2 class="about-section-title">🌟 Featured Labs & Projects</h2>
+        <div class="about-projects-list">
+            <a href="../labs/project1.html" class="about-project-card">
+                <h4>HSRPF-NAT-Etherchannel-VRF</h4>
+                <p>Hands-on Cisco lab with HSRP, NAT, EtherChannel, and VRF</p>
+            </a>
+            <a href="../labs/project2.html" class="about-project-card">
+                <h4>Network Redundancy + VLAN Security Lab</h4>
+                <p>Redundant dual-ISP setup, VLANs, EtherChannel, NAT/ACLs, and more</p>
+            </a>
+            <a href="../labs/index.html" class="about-project-card">
+                <h4>See All Labs</h4>
+                <p>Browse my full collection of hands-on labs and projects</p>
+            </a>
+        </div>
+    </section>
+</main>
+<!-- Add the following styles to style.css for a beautiful About page experience -->
+<!--
+.about-hero {
+    background: linear-gradient(135deg, #e3eefd 0%, #f8f9ff 100%);
+    padding: 3.5rem 0 2.5rem 0;
+    box-shadow: 0 2px 24px rgba(108,99,255,0.07);
+    border-radius: 0 0 40px 40px;
+    text-align: center;
+}
+body.dark-mode .about-hero {
+    background: linear-gradient(135deg, #23272f 0%, #181a1b 100%);
+}
+.about-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    box-shadow: 0 2px 18px rgba(108,99,255,0.13);
+    margin-bottom: 1.2rem;
+    border: 4px solid #fff;
+    background: #e3eefd;
+    object-fit: cover;
+}
+body.dark-mode .about-avatar {
+    border: 4px solid #23272f;
+    background: #23272f;
+}
+.about-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #4a33d1;
+}
+body.dark-mode .about-title {
+    color: #b7aaff;
+}
+.about-emoji {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+.about-highlight {
+    color: #6c63ff;
+    font-size: 1.14rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+.about-socials {
+    margin-top: 1.1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.about-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.4rem;
+    margin: 2.2rem 0 1.5rem 0;
+}
+.about-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(108,99,255,0.08);
+    padding: 1.8rem 1.3rem 1.3rem 1.3rem;
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-card:hover {
+    box-shadow: 0 8px 32px rgba(108,99,255,0.13);
+    transform: translateY(-4px) scale(1.02);
+}
+body.dark-mode .about-card {
+    background: #23272f;
+    color: #f4f6fa;
+}
+.about-section-title {
+    color: #5548c8;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+body.dark-mode .about-section-title {
+    color: #a099fa;
+}
+.about-journey-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2.2rem 0 1.5rem 0;
+    align-items: center;
+}
+.about-journey-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    max-width: 520px;
+    background: #f8f9ff;
+    border-radius: 11px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 2px 12px rgba(108,99,255,0.06);
+    transition: background 0.2s;
+}
+body.dark-mode .about-journey-step {
+    background: #23272f;
+}
+.about-journey-dot {
+    font-size: 2rem;
+    margin-right: 0.7rem;
+}
+.about-contact-form {
+    max-width: 400px;
+    margin: 2.2rem auto 1.2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+body.dark-mode .about-contact-form {
+    background: #23272f;
+}
+.about-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1.1rem;
+}
+.about-contact-link {
+    color: #6c63ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.18s, text-decoration 0.18s;
+}
+.about-contact-link:hover {
+    color: #4a33d1;
+    text-decoration: underline;
+}
+.about-projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 1.7rem;
+}
+.about-project-card {
+    background: #f5f6fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(108,99,255,0.09);
+    padding: 1.4rem 1.1rem 1.1rem 1.1rem;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: left;
+    color: #232556;
+    text-decoration: none;
+    transition: box-shadow 0.18s, transform 0.18s;
+}
+.about-project-card:hover {
+    box-shadow: 0 8px 32px rgba(108,99,255,0.13);
+    transform: translateY(-4px) scale(1.03);
+    color: #6c63ff;
+}
+body.dark-mode .about-project-card {
+    background: #23272f;
+    color: #e3eefd;
+}
+body.dark-mode .about-project-card:hover {
+    background: #33345a;
+    color: #a099fa;
+}
+@media (max-width: 700px) {
+    .about-hero-inner { flex-direction: column; gap: 1.2rem; }
+    .about-highlights-grid { grid-template-columns: 1fr; }
+    .about-projects-list { flex-direction: column; align-items: center; }
+}
+-->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Ntwork Beginner</div>
+            <div class="footer-links">
+                <a href="index.html">About</a> |
+                <a href="../labs/index.html">Labs</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/ntworkbeginner" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/ntworkbeginner" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://www.youtube.com/@ntworkbeginner" target="_blank" aria-label="YouTube">YouTube</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Ntwork Beginner. All rights reserved.</p>
+    </footer>
+<script src="../zoom-modal.js"></script>
+</body>
+</html>
